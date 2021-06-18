@@ -1,18 +1,22 @@
-DOCKER_FILE = Dockerfile
+DOCKER_FILE = Dockerfile.full
+DOCKER_FILE_MINIMAL = Dockerfile.minimal
 COMPOSE_FILE = docker-compose.yml
 IMAGE_TAG = diagnose1:latest
 
-img:
+buildf:
 	docker build --no-cache -f $(DOCKER_FILE) -t $(IMAGE_TAG) . 
 
-run:
+buildm:
+	docker build --no-cache -f $(DOCKER_FILE_MINIMAL) -t $(IMAGE_TAG) . 
+
+up:
 	docker-compose -f $(COMPOSE_FILE) up -d
 
-stop:
+down:
 	docker-compose -f $(COMPOSE_FILE) down
 
-rmi:
+clean:
 	docker rmi $(IMAGE_TAG)
 
 
-.PHONY: image rmi start stop
+.PHONY: buildf buildm up down clean

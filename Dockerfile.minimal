@@ -1,0 +1,19 @@
+FROM alpine:3.14
+
+LABEL authors="Alexander Zabiralov <zabiralov@gmail.com>"
+
+COPY rootfs/ /
+
+ENV MANWIDTH  80
+ENV LANG      en_US.UTF-8
+
+
+RUN apk add --no-cache \
+    bind-tools curl  \
+    dateutils diffutils  \
+    iputils jq lftp \
+    nmap openssh openssl  \
+    tmux mini_httpd
+
+
+ENTRYPOINT [ "/bin/sleep", "inf" ]

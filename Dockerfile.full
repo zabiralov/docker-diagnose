@@ -1,0 +1,42 @@
+FROM alpine:3.14
+
+LABEL authors="Alexander Zabiralov <zabiralov@gmail.com>"
+
+COPY rootfs/ /
+
+ENV MANWIDTH  80
+ENV LANG      en_US.UTF-8
+
+
+RUN apk add --no-cache \
+    bind-doc bind-tools \
+    curl curl-doc \
+    dateutils dateutils-doc \
+    diffutils diffutils-doc \
+    elinks elinks-doc \
+    ipmitool ipmitool-doc \
+    iputils \
+    jq jq-doc \
+    lftp lftp-doc \
+    man-db man-pages \
+    mariadb-client mariadb-doc \
+    mosh-client mosh-doc \
+    mtr mtr-doc \
+    nmap nmap-doc nmap-ncat nmap-nping nmap-scripts \
+    openssh openssh-doc \
+    openssl openssl-doc \
+    paris-traceroute paris-traceroute-doc \
+    perl perl-doc \
+    postgresql-client postgresql-doc \
+    pssh pssh-doc \
+    pwgen pwgen-doc \
+    python3 python3-doc \
+    rsync rsync-doc \
+    socat socat-doc \
+    speedtest-cli \
+    tcptraceroute tcptraceroute-doc \
+    tmux tmux-doc \
+    wget wget-doc
+
+
+ENTRYPOINT [ "/bin/sleep", "inf" ]

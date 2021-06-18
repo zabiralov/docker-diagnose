@@ -1,45 +1,36 @@
-# project name #
-
-
-#### NAME ####
-
-    TODO
-
-
-
-#### SYNOPSIS ####
-
-    TODO
-
+# docker-diagnose #
 
 
 #### DESCRIPTION ####
 
-    TODO
+    Alpine-based docker image with diagnostic tools
 
 
 
-#### OPTIONS ####
+#### BUILD AND RUN ####
 
-    TODO
+```
+  $ make buildf (make full build)
+  $ make buildm (make minimal build)
+  $ make up (start container)
+  $ make down (stop container)
+
+```
 
 
 
 #### ENVIRONMENT ####
 
-    TODO
+    See dockerfiles
 
 
 
 #### FILES ####
 
-    TODO
-
-
-
-#### EXAMPLES ####
-
-    TODO
+    * Dockerfile.full (full build)
+    * Dockerfile.minimal (minimal build)
+	* docker-compose.yml
+	* rootfs/
 
 
 
@@ -57,12 +48,6 @@
 
 
 
-#### HISTORY ####
-
-    TODO
-
-
-
 #### COPYRIGHT ####
 
     Copyright (c) 2021 Alexander E. Zabiralov
@@ -73,9 +58,3 @@
 #### AUTHOR ####
 
     Alexander E. Zabiralov <zabiralov@gmail.com>
-
-
-
-#### SEE ALSO ####
-
-    TODO
