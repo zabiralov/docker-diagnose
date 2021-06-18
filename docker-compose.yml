@@ -1,0 +1,4 @@
+diagnose:
+  image: 'diagnose1:latest'
+  restart: always
+  hostname: diagnose.example.com
